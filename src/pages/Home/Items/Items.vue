@@ -106,71 +106,71 @@
             width .13333rem
             margin-left .08rem
         &.haowu
-          color: #B4A078
+          color #B4A078
           > div
             background-color #F4E9CB
             i
               background url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/indexPopularArrow-fb701819de.png)
     > .ItemList
-      height: 6.4rem
-      background-color: #fff
+      height 6.4rem
+      background-color #fff
       display flex
       > ul
         display flex
         > li
-          margin-left: .4rem
-          width: 3.73333rem
+          margin-left .4rem
+          width 3.73333rem
           height 100%
-          float: left
-          position: relative
-          overflow: hidden
+          float left
+          position relative
+          overflow hidden
           background-color #fff
           &.item-more
-            display: block
-            border: .10667rem solid #F4F4F4
-            width: 3.73333rem
-            height: 3.73333rem
-            margin: 0 .4rem
-            line-height: 3.73333rem
-            text-align: center
+            display block
+            border .10667rem solid #F4F4F4
+            width 3.73333rem
+            height 3.73333rem
+            margin 0 .4rem
+            line-height 3.73333rem
+            text-align center
             > a > span
-              font-size: .37333rem
-              color: #666
+              font-size .37333rem
+              color #666
           > a
             width 100%
             > .img-warp
               width 100%
               background-color #f4f4f4
-              margin-bottom: .26667rem
+              margin-bottom .26667rem
               > img
                 width 100%
                 display block
 
             > .item-name
-              margin-top: .13333rem
-              padding: 0 .13333rem
-              line-height: .64rem
-              text-align: left
-              font-size: .37333rem
-              text-overflow: ellipsis
-              overflow: hidden
-              white-space: nowrap
-              color: #333
+              margin-top .13333rem
+              padding 0 .13333rem
+              line-height .64rem
+              text-align left
+              font-size .37333rem
+              text-overflow ellipsis
+              overflow hidden
+              white-space nowrap
+              color #333
 
             > .item-desc
-              display: block
-              margin-bottom: .18667rem
-              font-size: .32rem
-              color: #7f7f7f
-              line-height: .4rem
-              white-space: nowrap
-              text-overflow: ellipsis
-              overflow: hidden
-              padding: 0 .13333rem
+              display block
+              margin-bottom .18667rem
+              font-size .32rem
+              color #7f7f7f
+              line-height .4rem
+              white-space nowrap
+              text-overflow ellipsis
+              overflow hidden
+              padding 0 .13333rem
             > .item-price
-              padding: 0 .13333rem
-              font-size: .37333rem
-              line-height: 1
-              text-align: left
-              color: #b4282d
+              padding 0 .13333rem
+              font-size .37333rem
+              line-height 1
+              text-align left
+              color #b4282d
 </style>

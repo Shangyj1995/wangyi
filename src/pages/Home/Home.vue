@@ -150,7 +150,7 @@
       </section>
     </div>
     <i class="gotoTop" @click = 'gotoTop' v-show="isShowGotoTop"></i>
-    <a href="javascript:" class="newsEntrance" v-show="!isShowNews">
+    <a href="javascript:;" class="newsEntrance" v-show="!isShowNews">
       <i class="gift-icon"></i>
     </a>
   </div>
@@ -590,7 +590,7 @@
         .fuli
           width 10rem
           height 4rem
-          margin-bottom: .26667rem
+          margin-bottom .26667rem
           >a
             width 100%
             height 100%
@@ -710,19 +710,19 @@
               align-items center
               justify-content center
               >span
-                font-size: .32rem
-                line-height: .42667rem
-                color: #999
+                font-siz .32rem
+                line-height .42667rem
+                color #999
     >.gotoTop
-      position: absolute
-      right: .30667rem
-      bottom: 1.6rem
-      vertical-align: middle
-      width: 1.09333rem
-      height: 1.09333rem
-      background-image: url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/goToTop-7a19216f77.png)
-      background-size: 1.09333rem 1.09333rem
-      z-index: 2
+      position absolute
+      right .30667rem
+      bottom 1.6rem
+      vertical-align middle
+      width 1.09333rem
+      height 1.09333rem
+      background-image url(//yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/goToTop-7a19216f77.png)
+      background-size 1.09333rem 1.09333rem
+      z-index 2
     >.newsEntrance
       position fixed
       right 0
