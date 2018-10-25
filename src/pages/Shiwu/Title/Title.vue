@@ -1,7 +1,5 @@
 <template>
-  <div>
-    interlayer
-  </div>
+  <div class="title">为你推荐</div>
 </template>
 
 <script>

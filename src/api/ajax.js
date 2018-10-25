@@ -1,29 +1,27 @@
-/*ajax请求模块*/
 import axios from 'axios'
-export default function (url = '', data = {}, type = 'GET') {
-  return new Promise(function (resolve, reject) {
-    let promise
-    if(type === 'GET'){
-      //准备url query参数数据
-      let dataStr = '' //数据拼接字符串
-      Object.keys(data).forEach((key) => {
-        dataStr += key + '=' +data[key] + '&'
-      })
-      if(dataStr !== ''){
-        dataStr = dataStr.substring(0,dataStr.lastIndexOf('&'))
-        url = url + '?' +dataStr
+
+export default function (url,data={},method='GET') {
+
+  return new Promise((resolve,reject) =>{
+    let promise;
+    if(method === 'GET'){
+      let queryStr = '';
+      Object.keys(data).forEach(key=>{
+        queryStr += key + '='+ data[key]+"&"
+      });
+      if(queryStr){
+        queryStr = '?' + queryStr.substring(0, queryStr.length-1)
       }
-      //发送GET请求
-      promise = axios.get(url)
-    } else {
-      //发送POST请求
-      promise = axios.post(url, data)
+      promise = axios.get(url +  queryStr)
+    }else {
+      promise = axios.post(url ,data)
     }
-    promise.then((response) => {
-      resolve(response.data)
-    })
-      .catch((err) => {
-        reject(err)
+    promise
+      .then(response=>{
+        resolve(response.data)
+      })
+      .catch(err=>{
+        reject(err.data)
       })
   })
 }

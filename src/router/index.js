@@ -1,70 +1,67 @@
+import VueRouter from "vue-router"
 import Vue from 'vue'
-import VueRouter from 'vue-router'
 
-import Interlayer from '../pages/Interlayer/Interlayer.vue'
 import Home from '../pages/Home/Home.vue'
-import More from '../pages/More/More.vue'
-import Classify from '../pages/Classify/Classify.vue'
-import ShopItem from '../pages/ShopItem/ShopItem.vue'
-import Person from '../pages/Person/Person.vue'
-import ToLogin from '../pages/ToLogin/ToLogin.vue'
-import TextLogin from '../pages/TextLogin/TextLogin.vue'
+import Shiwu from '../pages/Shiwu/Shiwu.vue'
+import Category from '../pages/Category/Category.vue'
+import ShopCar from '../pages/ShopCar/ShopCar.vue'
+import PersonnelCenter from '../pages/PersonnelCenter/PersonnelCenter.vue'
+import Interlayer from '../pages/Interlayer/Interlayer.vue'
 
-
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 export default new VueRouter({
-  routes: [
+  routes:[
     {
-      path: '/interlayer',
-      component: Interlayer
-    },
-    {
-      path: '/home',
-      component: Home,
+      path:'/home',
+      component:Home,
       meta: {
-        showFooter: true
-      }
+        ishowHeader:false,// 标识HeaderGuide组件是否显示
+        ishowFooter: true  // 标识FooterGuide组件是否显示
+      },
     },
     {
-      path: '/more',
-      component: More,
+      path:'/shiwu',
+      component:Shiwu,
       meta: {
-        showFooter: true
-      }
+        ishowHeader:true,// 标识HeaderGuide组件是否显示
+        ishowFooter: true  // 标识FooterGuide组件是否显示
+      },
     },
     {
-      path: '/classify',
-      component: Classify,
+      path:'/category',
+      component:Category,
       meta: {
-        showFooter: true
-      }
+        ishowHeader:false,// 标识HeaderGuide组件是否显示
+        ishowFooter: true  // 标识FooterGuide组件是否显示
+      },
     },
     {
-      path: '/shop',
-      component: ShopItem,
+      path:'/shopcar',
+      component:ShopCar,
       meta: {
-        showFooter: true
-      }
+        ishowHeader:false,// 标识HeaderGuide组件是否显示
+        ishowFooter: true  // 标识FooterGuide组件是否显示
+      },
     },
     {
-      path: '/person',
-      component: Person,
+      path:'/personnelcenter',
+      component:PersonnelCenter,
       meta: {
-        showFooter: true
-      }
+        ishowHeader:true,// 标识HeaderGuide组件是否显示
+        ishowFooter: false  // 标识FooterGuide组件是否显示
+      },
     },
     {
-      path: '/tologin',
-      component: ToLogin
+      path:'/interlayer',
+      component:Interlayer,
+      meta: {
+        ishowFooter: false  // 标识FooterGuide组件是否显示
+      },
     },
     {
-      path: '/textlogin',
-      component: TextLogin
-    },
-    {
-      path: '/',
-      redirect: '/Interlayer'
+      path:'/',
+      redirect:'/home'
     }
   ]
 })

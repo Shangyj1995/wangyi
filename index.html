@@ -8,11 +8,13 @@
   <title>网易严选 - 以严谨的态度，为中国消费者甄选天下优品 -。- </title>
   <link rel="stylesheet" href="http://at.alicdn.com/t/font_882396_eam2k3hpbh.css">
   <link rel="stylesheet" href="/static/css/reset.css">
+  <link rel="stylesheet" href="/static/css/swiper.css">
 </head>
 <body>
 <div id="app"></div>
 </body>
 <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+<script type="text/javascript" src="/static/swiper.min.js"></script>
 <script>
   if ('addEventListener' in document) {
     document.addEventListener('DOMContentLoaded', function() {
@@ -31,19 +33,6 @@
     styleNode.innerHTML = "html{font-size: " + w +"px!important}"
     document.head.appendChild(styleNode)
   })();
-
-
-  /*(function (){
-    const dpr = window.devicePixelRatio;
-    const scale = 1/dpr;
-    const metaNode = document.querySelector('meta[name="viewport"]');
-    metaNode.setAttribute('content','width=device-width,initial-scale='+ scale +',user-scalable=no');
-    const width = document.documentElement.clientWidth;
-    const styleNode = document.createElement('style');
-    styleNode.innerHTML = 'html{font-size:'+ width/10 +'px!important;}';
-    document.head.appendChild(styleNode)
-  })()*/
-
 
 </script>
 </html>

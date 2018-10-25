@@ -1,5 +1,5 @@
 export default {
-  category:{},
-  banner:[],
-  home:{}
+  home_data:{},
+  category_data:[],
+  shiwu_data:{}
 }

@@ -1,26 +1,33 @@
+import {reqHomeData,reqCategoryData,reqShiWu} from '../api'
 
-import {
-  reqCategory,
-  reqHome,
-  reqBanner
-} from '../api'
-import {
-  RECEIVE_CATEGORY,
-  RECEIVE_BANNER,
-  RECEIVE_HOME
-} from './mutation-types'
+import {GETHOMEDATA,GETSHIWUDATA,GETCATEGORYDATA} from './mutationTypes'
+
+
+
 
 export default {
-  async getCategory({commit}){
-    const result=await reqCategory()
-    commit(RECEIVE_CATEGORY,{category:result.data})
+  async getHomeData({commit},cb){
+    const result = await reqHomeData();
+    if(result.code===0){
+      const home_data = result.data;
+      commit(GETHOMEDATA,{home_data});
+      cb && cb()
+    }
   },
-  async getHome({commit}){
-    const result=await reqHome()
-    commit(RECEIVE_HOME,{home:result.data})
+  async getShiwuData({commit},cb){
+    const result = await reqShiWu();
+    if(result.code===0){
+      const shiwu_data = result.data;
+      commit(GETSHIWUDATA,{shiwu_data});
+      cb && cb()
+    }
   },
-  async getBanner({commit}){
-    const result=await reqBanner()
-    commit(RECEIVE_BANNER,{banner:result.data})
+  async getCategoryData({commit},cb){
+    const result = await reqCategoryData();
+    if(result.code===0){
+      const category_data = result.data;
+      commit(GETCATEGORYDATA,{category_data});
+      cb && cb()
+    }
   },
 }

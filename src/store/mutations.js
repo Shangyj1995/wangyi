@@ -1,17 +1,17 @@
-import {
-  RECEIVE_CATEGORY,
-  RECEIVE_BANNER,
-  RECEIVE_HOME
-} from './mutation-types'
+import {GETHOMEDATA,GETSHIWUDATA,GETCATEGORYDATA} from './mutationTypes'
+
+
+
+
 
 export default {
-  [RECEIVE_CATEGORY](state,{category}){
-    state.category=category
+  [GETHOMEDATA](state,{home_data}){
+    state.home_data = home_data
   },
-  [RECEIVE_BANNER](state,{banner}){
-    state.banner=banner
+  [GETSHIWUDATA](state,{shiwu_data}){
+    state.shiwu_data = shiwu_data
   },
-  [RECEIVE_HOME](state,{home}){
-    state.home=home
-  },
+  [GETCATEGORYDATA](state,{category_data}){
+    state.category_data = category_data
+  }
 }

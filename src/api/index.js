@@ -1,8 +1,10 @@
-/*与后台交互模块*/
 import ajax from './ajax'
-//获取data数组
-export const reqCategory = () => ajax('/data')
-//获取banner数组
-export const reqBanner = () => ajax('/banner')
-//获取home对象
-export const reqHome = () => ajax('/home')
+
+//1.获取首页数据
+export const reqHomeData = () => ajax('/home_data');
+//2.获取识物数据
+export const reqShiWu = () => ajax('/shiwu_data');
+//3.获取分类数据
+export const reqCategoryData = () => ajax('/category_data');
+
+
